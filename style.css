@@ -7,7 +7,6 @@
 
 body {
     color: #ededed;
-
 }
 
 .header {
@@ -15,11 +14,12 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;background: transparent;
+    padding: 20px 10%;
+    background: transparent;
     z-index: 100;
     display: flex;
     align-items: center;
-    justify-content: space-between;     
+    justify-content: space-between;
 }
 
 .logo {
@@ -28,8 +28,21 @@ body {
     color: white;
     font-size: 1.5rem;
     position: relative;
+    cursor: default;
+    opacity: 0;
+    animation: slideright 1s ease forwards;
 }
 
+@keyframes slideright {
+        0%{
+            transform: translatex(-100px);
+            opacity: 0;
+        }
+        100%{
+            transform: translatex(0px);
+            opacity: 1;
+        }
+}
 
 .nav a {
     color: white;
@@ -39,6 +52,18 @@ body {
     font-weight: 600;
     margin-left: 35px;
     display: inline-block;
+    animation: slidetop .5s ease forwards ;
+}
+@keyframes slidetop {
+    0%{
+        transform: translatey(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatey(0px);
+        opacity: 1;
+    }
+    
 }
 
 .nav a:hover {
@@ -55,51 +80,84 @@ body {
     display: flex;
     align-items: center;
     padding: 10px 10% 0;
-
-    letter-spacing:2px;
+    letter-spacing: 2px;
 }
-.home-content{
+
+.home-content {
     max-width: 600px;
 }
 
-.home-content h3{
+.home-content h3 {
     font-size: 32px;
     font-weight: 700;
+    animation: slidebottom 1s ease forwards;
+    animation-delay: 0.3s;
+}
+@keyframes slidebottom  {
+    0%{
+        transform: translatey(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatey(0px);
+        opacity: 1;
+    }
+    
 }
 
-.home-content h1{
+.home-content h1 {
     font-size: 56px;
     font-weight: 700;
     margin: -3px 0;
+    opacity: 0;
+    animation: slideright 1s ease forwards;
 }
 
-.home-content p{
+.home-content p {
     font-size: 20px;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay:1s;
 }
-.home-content h3 span{
+@keyframes slideleft  {
+    0%{
+        transform: translatex(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatex(0px);
+        opacity: 1;
+    }
+    
+}
+
+
+.home-content h3 span {
     color: #0ef;
 }
-.home-content p{
+
+.home-content p {
     margin-top: 30px;
 }
 
 
-.home-sci a{
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        background: transparent;
-        border: 2px solid #0ef;
-        border-radius: 50%;
-        text-decoration: none;
-        font-size: 22px;
-        text-decoration: none;
-        color: white;
-        margin: 30px 15px 30px 0;
+.home-sci a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0ef;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+    margin: 30px 15px 30px 0;
 }
-.home-sci a:hover{
+
+.home-sci a:hover {
     background: #0ef;
     color: black;
     box-shadow: 0 0 20px #0ef;
@@ -108,7 +166,7 @@ body {
 
 /* botton */
 
-.btn-box{
+.btn-box {
     padding: 12px 28px;
     cursor: pointer;
     background: #0ef;
@@ -119,8 +177,8 @@ body {
     letter-spacing: 1px;
 }
 
-.btn-box:hover{
-    box-shadow: 0 0 5px cyan,0 0 25px cyan,
-    0 0 50px cyan,0 0 100px cyan;
+.btn-box:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan,
+        0 0 50px cyan, 0 0 100px cyan;
 
 }
