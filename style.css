@@ -100,3 +100,20 @@ body {
 
 
 /* botton */
+
+.btn-box{
+    padding: 12px 28px;
+    cursor: pointer;
+    background: #0ef;
+    font-size: 16px;
+    border-radius: 40px;
+    display: inline-block;
+    color: #081b29;
+    letter-spacing: 1px;
+}
+
+.btn-box:hover{
+    box-shadow: 0 0 5px cyan,0 0 25px cyan,
+    0 0 50px cyan,0 0 100px cyan;
+
+}
