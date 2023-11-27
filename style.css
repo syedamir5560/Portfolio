@@ -248,7 +248,7 @@ body {
 /* servises */
 
 .container {
-    padding: 90px;
+    padding: 10px;
 }
 
 #services {
@@ -258,49 +258,78 @@ body {
     margin-bottom: 4rem;
 }
 
-.sub-title{
- text-align: center;
- padding-bottom:70px;   
- font-size: 60px;
+.sub-title {
+    text-align: center;
+    padding-bottom: 70px;
+    font-size: 60px;
 }
 
-.sub-title span{
+.sub-title span {
     color: #0ef;
 }
 
-.services-list{
+.services-list {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    
+    gap: 30px;
+
+
 }
 
-.services-list div{
+.services-list div {
     background-color: transparent;
     font-size: 15px;
     font-weight: 600;
-    flex-wrap: wrap;
     padding: 20px;
     border-right: 10px;
     border-radius: 20px;
-    transition: background 0.5s , transform 0.5s;
-    box-shadow: 1px 1px 20px #012290f7,1px 1px 40px #012290f7;
-    gap: 50px;
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #012290f7;
+
+
 
 }
-.services-list div p{
+
+.services-list div p {
     width: 25vw;
+    margin-bottom: 20px;
 }
-.services-list div i{
+
+.services-list div i {
     font-size: 50px;
     margin-bottom: 20px;
 
 }
 
-.services-list div h2{
+.services-list div h2 {
     font-size: 30px;
     margin-bottom: 15px;
     font-weight: 600;
 
+}
+
+.services-list div a{
+    color: black;
+    font-size: 12px;
+    text-decoration: none;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.read{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 2px;
+    box-shadow: 0 0 5px #0ef,0 0 25px #0ef;
 }
