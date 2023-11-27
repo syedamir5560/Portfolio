@@ -7,6 +7,7 @@
 
 body {
     color: #ededed;
+    height: 200vh;
 }
 
 .header {
@@ -34,14 +35,15 @@ body {
 }
 
 @keyframes slideright {
-        0%{
-            transform: translatex(-100px);
-            opacity: 0;
-        }
-        100%{
-            transform: translatex(0px);
-            opacity: 1;
-        }
+    0% {
+        transform: translatex(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatex(0px);
+        opacity: 1;
+    }
 }
 
 .nav a {
@@ -52,18 +54,21 @@ body {
     font-weight: 600;
     margin-left: 35px;
     display: inline-block;
-    animation: slidetop .5s ease forwards ;
+    animation: slidetop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
+
 @keyframes slidetop {
-    0%{
+    0% {
         transform: translatey(-100px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translatey(0px);
         opacity: 1;
     }
-    
+
 }
 
 .nav a:hover {
@@ -93,16 +98,17 @@ body {
     animation: slidebottom 1s ease forwards;
     animation-delay: 0.3s;
 }
-@keyframes slidebottom  {
-    0%{
+
+@keyframes slidebottom {
+    0% {
         transform: translatey(-100px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translatey(0px);
         opacity: 1;
     }
-    
 }
 
 .home-content h1 {
@@ -117,18 +123,20 @@ body {
     font-size: 20px;
     opacity: 0;
     animation: slideleft 1s ease forwards;
-    animation-delay:1s;
+    animation-delay: 1s;
 }
-@keyframes slideleft  {
-    0%{
+
+@keyframes slideleft {
+    0% {
         transform: translatex(100px);
         opacity: 0;
     }
-    100%{
+
+    100% {
         transform: translatex(0px);
         opacity: 1;
     }
-    
+
 }
 
 
@@ -138,8 +146,9 @@ body {
 
 .home-content p {
     margin-top: 30px;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 0.7s;
 }
-
 
 .home-sci a {
     display: inline-flex;
@@ -155,6 +164,10 @@ body {
     text-decoration: none;
     color: white;
     margin: 30px 15px 30px 0;
+    transform: 0.5s ease;
+    opacity: 0;
+    animation: slideleft 1s ease forwards;
+    animation-delay: calc(0.2*var(--i));
 }
 
 .home-sci a:hover {
@@ -175,10 +188,41 @@ body {
     display: inline-block;
     color: #081b29;
     letter-spacing: 1px;
+    animation: slidetop 1s ease forwards;
+    animation-delay: 0.5 s;
+    box-shadow: 0 0 5px #0ef, 0 0 10px #0ef;
+    border: none;
+    font-weight: 600;
 }
 
 .btn-box:hover {
-    box-shadow: 0 0 5px cyan, 0 0 25px cyan,
-        0 0 50px cyan, 0 0 100px cyan;
+    box-shadow: 0 0 5px cyan, 0 0 10px cyan,
+        0 0 15px cyan, 0 0 20px cyan;
 
+}
+
+/* About sectoion */
+
+.about{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1.5rem;
+
+}
+.about-img img{
+    padding-bottom: 20%;
+    max-width: 630px;
+    height: auto;
+    width: 100%;
+    border-radius: 8px;
+
+}
+.about-text h2{
+    font-size: 60px;
+
+}
+.about-text h2 span{
+    color: #0ef;
+    
 }
