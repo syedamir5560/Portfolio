@@ -8,6 +8,7 @@
 body {
     color: #ededed;
     height: 200vh;
+    background: #081b29;
 }
 
 .header {
@@ -21,6 +22,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: #081b29;
 }
 
 .logo {
@@ -68,7 +70,6 @@ body {
         transform: translatey(0px);
         opacity: 1;
     }
-
 }
 
 .nav a:hover {
@@ -225,4 +226,19 @@ body {
 .about-text h2 span{
     color: #0ef;
     
+}
+
+.about-text h4{
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 38px;
+}
+
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom:4rem ;
 }
