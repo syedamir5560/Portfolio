@@ -60,6 +60,7 @@ body {
     animation-delay: calc(.2s * var(--i));
 }
 
+
 @keyframes slidetop {
     0% {
         transform: translatey(-100px);
@@ -241,8 +242,9 @@ body {
     color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
-    margin-bottom: 2rem;
-    margin-right: 20px;
+    margin-bottom: 0.5rem;
+    margin-right: 30px;
+
 }
 
 /* servises */
@@ -262,6 +264,7 @@ body {
     text-align: center;
     padding-bottom: 70px;
     font-size: 60px;
+    margin-top: 50px;
 }
 
 .sub-title span {
@@ -275,7 +278,6 @@ body {
     flex-wrap: wrap;
     gap: 30px;
 
-
 }
 
 .services-list div {
@@ -287,9 +289,11 @@ body {
     border-radius: 20px;
     transition: background 0.5s, transform 0.5s;
     box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #012290f7;
+}
 
-
-
+.services-list div:hover {
+    transform: translatey(-20px);
+    transition: all ease 0.2s;
 }
 
 .services-list div p {
@@ -310,15 +314,16 @@ body {
 
 }
 
-.services-list div a{
+.services-list div a {
     color: black;
     font-size: 12px;
     text-decoration: none;
     margin-top: 20px;
+    margin-bottom: 20px;
     display: inline-block;
 }
 
-.read{
+.read {
     display: inline-block;
     padding: 12px 28px;
     background: #0ef;
@@ -331,5 +336,12 @@ body {
     opacity: 0;
     animation: slidetop 1s ease forwards;
     animation-delay: 2px;
-    box-shadow: 0 0 5px #0ef,0 0 25px #0ef;
+    box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;
 }
+
+.read:hover {
+    background: #0ef;
+    color: black;
+    box-shadow: 0 0 20px #0ef;
+}
+
